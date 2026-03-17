@@ -7,10 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Concrete\" />
     <Folder Include="Container\" />
     <Folder Include="ErrorMessages\" />
-    <Folder Include="Abstract\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Carola.DataAccessLayer\Carola.DataAccessLayer.csproj" />
     <ProjectReference Include="..\Carola.EntityLayer\Carola.EntityLayer.csproj" />
   </ItemGroup>
 

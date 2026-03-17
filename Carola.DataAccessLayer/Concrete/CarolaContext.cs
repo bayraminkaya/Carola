@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Carola.EntityLayer.Entites;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,18 @@ using System.Threading.Tasks;
 
 namespace Carola.DataAccessLayer.Concrete
 {
-    internal class CarolaContext
+    public class CarolaContext:DbContext
     {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=DESKTOP-5V6MJ7S;Database=CarolaRentDb;Trusted_Connection=True;");
+        }
+
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Car> Cars { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Location> Locations { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
     }
 }
