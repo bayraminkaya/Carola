@@ -12,7 +12,7 @@ namespace Carola.DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-5V6MJ7S;Database=CarolaRentDb;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-5V6MJ7S;Database=CarolaRentDb;Trusted_Connection=True;TrustServerCertificate=True;");
         }
 
         public DbSet<Brand> Brands { get; set; }
