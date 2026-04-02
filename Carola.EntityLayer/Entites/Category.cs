@@ -10,6 +10,7 @@ namespace Carola.EntityLayer.Entites
     {
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
+        public List<Car> Cars { get; set; }
 
     }
 }

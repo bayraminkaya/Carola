@@ -9,5 +9,6 @@ namespace Carola.BusinessLayer.Abstract
 {
     public interface ICarService : IGenericService<Car>
     {
+        Task<List<Car>> TGetAllCarsWithCategoryAsync();
     }
 }
